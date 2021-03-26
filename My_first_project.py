@@ -6,7 +6,7 @@ import os
 import webbrowser
 import smtplib
 import subprocess as sb
-import playsound as ps
+import playsound as pss
 engine=pyttsx3.init('sapi5')
 voices=engine.getProperty('voices')
 # print(voices[0].id)
@@ -78,7 +78,7 @@ if __name__=='__main__':
             songs=os.listdir(music)
             print(songs)
             k=os.path.join(music,songs[0])
-            ps.playsound(r'C:\Users\admin\Music\Slimshady.mp3')
+            pss.playsound(r'C:\Users\admin\Music\Slimshady.mp3')
         elif 'what time' in query:
             strtime=dt.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir, the time is {strtime}")
